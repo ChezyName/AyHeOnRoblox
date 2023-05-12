@@ -35,7 +35,7 @@ async function mainLoop(){
         });
         const content = await rawResponse.json();
       
-        if(content.lastOnlineTimestamps.length > 0){
+        if(content.lastOnlineTimestamps != null){
             let lastOnline = new Date(content.lastOnlineTimestamps[0].lastOnline);
             if(lastOnline.getUTCDay() == new Date().getUTCDay() && cDelay <= 0){
                 cDelay = DelayMin * 60000
