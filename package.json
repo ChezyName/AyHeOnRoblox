@@ -4,8 +4,14 @@
   "description": "a bot to snitch on users on roblox when there online but wont join discord",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "node index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.0.3"
+  }
 }
