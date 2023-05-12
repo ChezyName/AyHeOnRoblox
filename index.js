@@ -37,7 +37,7 @@ async function mainLoop(){
       
         if(content.lastOnlineTimestamps != null){
             let lastOnline = new Date(content.lastOnlineTimestamps[0].lastOnline);
-            if(lastOnline.getUTCDay() == new Date().getUTCDay() && cDelay <= 0){
+            if(lastOnline.getUTCDay() == new Date().getUTCDay() && lastOnline.getUTCHours() == new Date().getUTCHours() && lastOnline.getUTCMinutes() == new Date().getUTCMinutes() && cDelay <= 0){
                 cDelay = DelayMin * 60000
                 msg = process.env.CUSTOM_MSG_BEFORE_NAME + UserDiscID + process.env.CUSTOM_MSG_AFTER_NAME;
                 client.channels.cache.get(SnitchID).send(msg);
